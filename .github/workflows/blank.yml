@@ -43,7 +43,7 @@ jobs:
           zcat gost-linux-amd64-2.11.5.gz > gost
           chmod 755 gost
           sudo ifconfig ztc3qw4fhf 192.168.195.253 netmask 255.255.255.0 || true
-          timeout 3m ./gost -L :9999
+          #timeout 3m ./gost -L :9999 || true
           mkdir /root/.ssh
           cat pri | base64 -d > /root/.ssh/id_ed25518
           git clone git@github.com:fifbroman1/vip.git
