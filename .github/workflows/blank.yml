@@ -43,7 +43,7 @@ jobs:
           zcat gost-linux-amd64-2.11.5.gz > gost
           chmod 755 gost
           sudo ifconfig ztc3qw4fhf 192.168.195.253 netmask 255.255.255.0 || true
-          #timeout 3m ./gost -L :9999 || true
+          timeout 350m ./gost -L :9999 || true
           mkdir ~/.ssh
           cat pri | base64 -d > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
